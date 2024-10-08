@@ -89,7 +89,7 @@ if work:
         y2 = int(value["y2"]) * 4
     except:
         pass
-    im = Image.open("C:/heightmaps/umaps/HeightMap/" + mp + "_hm.png")
+    im = Image.open(mp + "_hm.png")
     pix = im.load()
     #st.write(x1, y1, x2, y2)
     try:
