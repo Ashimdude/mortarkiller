@@ -1,0 +1,5 @@
+st-img-pastebutton
+streamlit-image-coordinates
+pandas
+streamlit
+pillow
