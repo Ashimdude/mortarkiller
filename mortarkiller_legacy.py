@@ -68,7 +68,7 @@ if work:
     if paste_result.image_data is not None:
         st.image(paste_result.image_data)
     value = streamlit_image_coordinates(
-        "C:/heightmaps/umaps/HeightMap/" + mp + "2048.png",
+        mp + "2048.png",
         #mp + "2048.png",
         key="local4",
         use_column_width="never",
@@ -83,7 +83,7 @@ if work:
         pass
 
     #im = Image.open(mp + "_hm.png")
-    im = Image.open("C:/heightmaps/umaps/HeightMap/" + mp + "_hm.png")
+    im = Image.open(mp + "_hm.png")
     pix = im.load()
     trg = pix[x2, y2]
     shtr = pix[x1, y1]
