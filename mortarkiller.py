@@ -89,7 +89,7 @@ if work:
         y2 = int(value["y2"]) * 4
     except:
         pass
-    im = Image.open("C:/heightmaps/umaps/mortarkiller/" + mp + "_hm.png")
+    im = Image.open(mp + "_hm.png")
     if (height == 1200):
         x1 = x1 + 3
         y1 = y1 + 5
