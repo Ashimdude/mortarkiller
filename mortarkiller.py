@@ -89,7 +89,22 @@ if work:
         y2 = int(value["y2"]) * 4
     except:
         pass
-    im = Image.open(mp + "_hm.png")
+    im = Image.open("C:/heightmaps/umaps/mortarkiller/" + mp + "_hm.png")
+    if (height == 1200):
+        x1 = x1 + 3
+        y1 = y1 + 5
+        x2 = x2 + 3
+        y2 = y2 + 5
+        st.write(1200)
+    if (height == 1080):
+        x1 = x1 + 24
+        y1 = y1 + 5
+        x2 = x2 + 24
+        y2 = y2 + 5
+        st.write(1080)
+    else:
+        st.write("RESOLUTION UNSUPPORTED/UNOPTIMIZED. Results will be slightly innacture.")
+        st.write("Text @ashimshim in Telegram to fully implement your resolution")
     pix = im.load()
     #st.write(x1, y1, x2, y2)
     try:
