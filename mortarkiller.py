@@ -72,7 +72,10 @@ if work:
     seatarget = seatarget.replace(",", ".")
     mountain = 0
     mountain2 = 0
-    
+    if (es == ""):
+        es = "0"
+    if (et == ""):
+        et = "0"
     #st.image(paste_result.image_data)
     #im = Image.open(paste_result.image_data)
     value = streamlit_image_coordinates(
