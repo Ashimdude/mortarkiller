@@ -118,6 +118,5 @@ if work:
             x+= (v0x * 0.001)
             y-= (vy * 0.001)
         if (abs(x - distance) <= 10):
-            st.write("Aim mortar: " + distances[angles.index(vv)])
-            st.write("This is for actual hit distance: " + str(x))
+            st.write("For hit distance: " + str(x) + "   " + "Aim mortar: " + distances[angles.index(vv)])
         vv+=0.5
