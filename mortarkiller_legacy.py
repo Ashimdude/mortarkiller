@@ -17,8 +17,8 @@ bullseye0 = 0
 bullseye1 = 127
 es = st.text_input("How high above terrain are you?", "0.0", key="shooter")
 et = st.text_input("How high above terrain is target?", "0.0")
-sea = st.text_input("OPTIONAL your alt from sea level (needs bullseye). For skyscraper, mountain", "0.0")
-seatarget = st.text_input("OPTIONAL target sea level", "0.0")
+sea = st.text_input("OPTIONAL your alt from sea level. For skyscraper, mountain", "")
+seatarget = st.text_input("OPTIONAL target sea level", "")
 es = es.replace(",", ".")
 et = et.replace(",", ".")
 es2 = 0.0
@@ -28,10 +28,6 @@ if (es == ""):
     es = "0"
 if (et == ""):
     et = "0"
-if (sea == ""):
-    sea = "0"
-if (seatarget == ""):
-    seatarget = "0"
 st.write("Use a 2048x2048 map to get coordinates")
 mp = str(option1).lower()
 rawstr = "121 133 145 157 169 181 193 204 216 228 239 250 262 273 284 295 307 317 328 339 350 360 371 381 391"
@@ -88,15 +84,14 @@ if work:
     trg = pix[x2, y2]
     shtr = pix[x1, y1]
     elevation = (shtr[0] - trg[0]) * 2.08
-    if (sea != "0.0") and (sea != "0") and (sea != ""):
+    if (sea != ""):
         elevationbullshm = (shtr[0] - bullseye1) * 2.08
         elevationbullsea = int(float(sea)) - bullseye0
         mountain = abs(elevationbullsea - elevationbullshm) + tunealt
-    if (seatarget != "0.0") and (seatarget != "0") and (seatarget != ""):
+    if (seatarget != ""):
         elevationbullshm2 = (trg[0] - bullseye1) * 2.08
         elevationbullsea2 = int(float(seatarget)) - bullseye0
         mountain2 = abs(elevationbullsea2 - elevationbullshm2) + tunealt
-        st.write(trg[0], bullseye1, elevationbullshm2, int(float(seatarget)), elevationbullsea2, mountain2)
     es2 = float(str(float(es) + mountain))
     et2 = float(str(float(et) + mountain2))
     distance1 = ((x1 - x2) ** 2)
