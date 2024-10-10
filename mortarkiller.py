@@ -63,8 +63,8 @@ else:
 if work:
     es = st.text_input("OPTIONAL How high above terrain are you?", "0.0", key="shooter")
     et = st.text_input("OPTIONAL How high above terrain is target?", "0.0")
-    sea = st.text_input("OPTIONAL your alt. from sea level. For skyscraper, mountain", "0.0")
-    seatarget = st.text_input("OPTIONAL target sea level alt.", "0.0")
+    sea = st.text_input("OPTIONAL your alt. from sea level. For skyscraper, mountain", "")
+    seatarget = st.text_input("OPTIONAL target sea level alt.", "")
     es = es.replace(",", ".")
     et = et.replace(",", ".")
     es2 = 0.0
@@ -104,7 +104,7 @@ if work:
         st.write(1080)
     else:
         st.write("RESOLUTION UNSUPPORTED/UNOPTIMIZED. Results will be slightly innacture.")
-        st.write("Text @ashimshim in Telegram to fully implement your resolution")
+        st.write("Text @ashimshim in Telegram or ashim9 discord to fully implement your resolution")
     pix = im.load()
     #st.write(x1, y1, x2, y2)
     try:
@@ -113,15 +113,14 @@ if work:
     except:
         st.write("Stay INSIDE the image")
     elevation = (shtr[0] - trg[0]) * 2.08
-    if (sea != "0.0") and (sea != "0") and (sea != ""):
+    if (sea != ""):
         elevationbullshm = (shtr[0] - bullseye1) * 2.08
         elevationbullsea = int(float(sea)) - bullseye0
         mountain = abs(elevationbullsea - elevationbullshm) + tunealt
-    if (seatarget != "0.0") and (seatarget != "0") and (seatarget != ""):
+    if (seatarget != ""):
         elevationbullshm2 = (trg[0] - bullseye1) * 2.08
         elevationbullsea2 = int(float(seatarget)) - bullseye0
         mountain2 = abs(elevationbullsea2 - elevationbullshm2) + tunealt
-        st.write(trg[0], bullseye1, elevationbullshm2, int(float(seatarget)), elevationbullsea2, mountain2)
     es2 = float(str(float(es) + mountain))
     et2 = float(str(float(et) + mountain2))
     distance1 = ((x1 - x2) ** 2)
