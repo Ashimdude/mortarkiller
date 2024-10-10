@@ -98,13 +98,13 @@ if work:
         y1 = y1 + 5
         x2 = x2 + 3
         y2 = y2 + 5
-        st.write(1200)
+        st.write("Detected map resolution: 1200 pixels")
     if (height == 1080):
         x1 = x1 + 24
         y1 = y1 + 5
         x2 = x2 + 24
         y2 = y2 + 5
-        st.write(1080)
+        st.write("Detected map resolution: 1080 pixels")
     else:
         st.write("RESOLUTION UNSUPPORTED/UNOPTIMIZED. Results will be slightly innacture.")
         st.write("Text @ashimshim in Telegram or ashim9 discord to fully implement your resolution")
