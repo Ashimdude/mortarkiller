@@ -1,3 +1,9 @@
+OUTDATED TOOL
+USE https://github.com/Ashimdude/mortarkiller_desktop instead
+better and faster
+
+
+
 The app is hosted at https://mortarkiller.streamlit.app/
 
 Or you can run it locally by downloading/cloning the repo
